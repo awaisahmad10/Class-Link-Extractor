@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+
+//Create a program that outputs link to lecture/ tutorial based on the day and start time of the class
+int main()
+{
+  //Initialize the start time and day as strings
+  std::string start_time;
+  std::string day;
+  
+  //Ask the user what day it is
+  std::cout<<"What day is it? ";
+  std::cin>>day;
+  
+  //Based on the day, and start time if the day has multiple classes, output the link to the respective google meet
+  if (day == "Monday") {
+      std::cout<<"What time does your class start (EST)? ";
+      std::cin>>start_time;
+      if (start_time == "11:10") {
+          std::cout<<"Here is the link to Environmental Science lecture: *LINK* \n";
+      }
+      else if (start_time == "12:40"){
+          std::cout<<"Here is the link to Electric Circuits tutorial: *LINK* \n";
+      }
+      else if (start_time == "2:10" || start_time == "14:10"){
+          std::cout<<"Here is the link to Discrete Mathematics tutorial: *LINK* \n";
+      }
+  }
+  else if (day == "Tuesday") {
+      std::cout<<"Here is the link to Electric Circuits lecture: *LINK* \n";
+  }
+  else if (day == "Wednesday") {
+      std::cout<<"Here is the link to Discrete Mathematics lecture: *LINK* \n";
+  }
+  else if (day == "Thursday") {
+      std::cout<<"Here is the link to Electric Circuits lecture: *LINK* \n";
+  }
+  else if (day == "Friday") {
+      std::cout<<"What time does your class start (EST)? ";
+      std::cin>>start_time;
+      
+      if (start_time == "2:10" || start_time == "14:10") {
+          std::cout<<"Here is the link to Discrete Mathematics lecture: *LINK* \n";
+      }
+      else if (start_time == "4:10" || start_time == "16:10") {
+          std::cout<<"Your Electric Circuits lab has no saved link. Check with group members. \n";
+      }
+    }
+    else {
+        std::cout<<"Today is a weekend. No class!";
+    }
+    
+}
